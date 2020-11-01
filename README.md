@@ -14,6 +14,6 @@ __With that in mind lets first write a function to generate random variables fro
 
 The final random variable (which should be returned from your function) is then computed as:
 
-![](https://render.githubusercontent.com/render/math?math=T=\frac{\overline{X}_n}{S_n/sqrt{n}})
+![](https://render.githubusercontent.com/render/math?math=T=\frac{\overline{X}_n}{S_n/\sqrt{n}})
 
 I have written this as T, as the random variable we generate in this, is from the same distribution as was sampled by T in the previous exercise.  
