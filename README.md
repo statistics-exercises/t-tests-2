@@ -2,7 +2,7 @@
 
 Thus far we have formulated the hypothesis tests we have done thus far by assuming that the test statistic:
 
-![](https://render.githubusercontent.com/render/math?math=T=\frac{\frac{1}{n_1}\sum_{i=1}^{n_1}X_i-\frac{1}{n_2}\sum_{j=1}^{n_2}Y_j-\theta_0}{\sqrt{\frac{\sigma_1^2}{n_1}%2B\frac{\sigma_2}{n_2}}})
+![](https://render.githubusercontent.com/render/math?math=T=\frac{1}{\sigma\sqrt{n}}\sum_{i=1}^n(X_i-\mu))
 
 is a sample from a standard normal random variable.  Furthermore, the grounds for making this assumption is the central limit theorem. 
 
@@ -10,7 +10,7 @@ There is a slight wrinkle in what we are doing, however:  we often have to __est
 
 __With that in mind lets first write a function to generate random variables from the distribution that is sampled by the random variable T when the exact standard deviation is replaced by an estimate of this quantity.__  To complete the exercise you are going to have to complete the function called `gen_t_variable`, which takes one argument in input `n`.  To generate the random variable we want you are going to generate `n` standard normal random variables, ![](https://render.githubusercontent.com/render/math?math=X_i), and you are going to compute a sample mean and an unbiased estimate of the sample variance using:
 
-![](https://render.githubusercontent.com/render/math?math=\overline{X}_n = \frac{1}{n}\sum_{i=1}^nX_i\qquad\textrm{and}\qquad\S_n^2=\frac{n}{n-1}\left(\sum_{i=1}^nX_i^2-\overline{X}_n^2\right))
+![](https://render.githubusercontent.com/render/math?math=\overline{X}_n=\frac{1}{n}\sum_{i=1}^nX_i\qquad\textrm{and}\qquad\S_n^2=\frac{n}{n-1}\left(\sum_{i=1}^nX_i^2-\overline{X}_n^2\right))
 
 The final random variable (which should be returned from your function) is then computed as:
 
